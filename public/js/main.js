@@ -7,7 +7,7 @@ $(function () {
   var sharedSurface = new surface($("#surface"));
       
   // init the mouse movment tracker and attach it to the surface
-  var mouseMovmentThreashold = 15;
+  var mouseMovmentThreashold = 15; // the mouse pointer will have to be moved at least X pixels in each direction before we invoke the server-side call
 	var tracker = new pointerTracker(clientId, mouseMovmentThreashold);
   sharedSurface.attachTracker(tracker);
       

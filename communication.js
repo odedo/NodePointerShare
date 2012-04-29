@@ -3,12 +3,12 @@
   var io;
   var cache = require('./cache');
 
-  // init the i/o communication mocule
+  // init the i/o communication module
   module.exports.init = function(app) {
     io = require('socket.io').listen(app);
     
     io.sockets.on('connection', function (socket) {
-      // when client is connected, we want to send it all the cached pointer locations
+      // when a client is connected, we want to send it all the cached pointer locations
       cache.getAllPointers(function(clientId, x, y) {
         console.log('sending data to client - ' + clientId)
         socket.emit('updatePointer', { x: x, y: y, clientId: clientId });

@@ -6,7 +6,7 @@ var communication = require('./communication');
 // init socket.io module
 communication.init(app);
 
-// start listeneing
+// start listening
 app.listen(81);
 
 // serving static content - anything inside the "/public" folder

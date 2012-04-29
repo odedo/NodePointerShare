@@ -35,6 +35,7 @@
       $('body').append(pointer);
     }
     
+    // get the position of the element in the client's window
     var left = element.offset().left;
     var top = element.offset().top;
     
@@ -55,5 +56,4 @@
   function getPointerElementId(clientId) {
     return "pointer_" + clientId;
   }
-  
 }

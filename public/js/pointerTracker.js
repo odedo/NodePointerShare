@@ -3,6 +3,8 @@
   // store the last submitted values
   var lastSubmittedX = 0;
   var lastSubmittedY = 0;
+  
+  // store the callback functions
   var updatePointerCallback;
   var clearPointerCallback;
 
@@ -15,6 +17,7 @@
       submit = true;
     }
 
+    // check if we need to submit the position of the cursor to the server
     if (submit) {
       if (updatePointerCallback) {
         updatePointerCallback(x, y);
